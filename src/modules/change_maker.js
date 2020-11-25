@@ -1,14 +1,12 @@
 
 // amount_to_return === 80
 // return_signature = hash
-function makeChange(amount_to_return, coin_set, result = null) {
-  if (result === null) {
-    result = {};
+function makeChange(amount_to_return, coin_set) {
+  let result = {};
 
-    coin_set.forEach(coin => {
-      result[coin] = 0;
-    })
-  }
+  coin_set.forEach(coin => {
+    result[coin] = 0;
+  });
 
   coin_set.forEach(coin => {
     if (amount_to_return >= coin) {
