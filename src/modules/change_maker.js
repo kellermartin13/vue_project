@@ -17,10 +17,6 @@ function makeChange(amount_to_return, coin_set, result = null) {
     }
   });
 
-  if (amount_to_return > 0) {
-    return makeChange(amount_to_return, coin_set, result)
-  }
-
   return result
 }
 
