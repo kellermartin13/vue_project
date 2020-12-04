@@ -1,4 +1,4 @@
-const makeChange = require('../../src/modules/change_maker');
+import { makeChange } from '../../src/modules/change_maker';
 
 describe('changeMaker', () => {
   describe('when US coin set', () => {
