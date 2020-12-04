@@ -10,7 +10,7 @@
         <input name="amount_due" type="number" v-model="amount_due" />
       </label>
     </form>
-    <div @click="returnChange(12, 8)">Return Change</div>
+    <div @click="returnChange">Return Change</div>
 
     <div v-if="shouldShowResult">
       Here's your change!
