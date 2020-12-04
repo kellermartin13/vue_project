@@ -1,7 +1,17 @@
+// amount_given, amount_due
+export function calculateAmountToReturn(amount_given, amount_due) {
+  const cents_given = amount_given * 100;
+  const cents_due = amount_due * 100;
 
-// amount_to_return === 80
+  const result = cents_given - cents_due;
+
+  const coin_set = [25, 10, 5, 1];
+
+  return makeChange(result, coin_set)
+}
+
 // return_signature = hash
-function makeChange(amount_to_return, coin_set) {
+export function makeChange(amount_to_return, coin_set) {
   let result = {};
 
   coin_set.forEach(coin => {
@@ -34,4 +44,4 @@ function getAmountRemaining(amount_to_return, coin_count, coin_value) {
   return amount_to_return
 }
 
-module.exports = makeChange;
+// module.exports = calculateAmountToReturn;
